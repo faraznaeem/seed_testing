@@ -1,24 +1,22 @@
-# README
+# How to populate your database with fake data using the faker gem
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For this reference guide I have scaffolded a simple blog app using ruby on rails.
 
-Things you may want to cover:
+#### Steps
+- Add `gem 'faker'` to your Gemfile
+- Run `$ bundle install`
+- Add `require 'faker'` in the top of the seed file
+- Add the following code (example):
+```ruby
+10.times do
+           Blog.create!(title: Faker::RickAndMorty.character,
+                        content:Faker::RickAndMorty.quote)
+         end
 
-* Ruby version
+```
+- Run ` $ rails db:setup`
+- Run `$ rails s`
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You can change `Faker::RickAndMorty.character` and `Faker::RickAndMorty.quote`
+depending on what content you need to be displayed. You can find other examples in the [faker documentation](https://github.com/stympy/faker)
