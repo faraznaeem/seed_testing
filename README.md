@@ -9,9 +9,9 @@ For this reference guide I have scaffolded a simple blog app using ruby on rails
 - Add the following code (example):
 ```ruby
 10.times do
-           Blog.create!(title: Faker::RickAndMorty.character,
-                        content:Faker::RickAndMorty.quote)
-         end
+   Blog.create!(title: Faker::RickAndMorty.character,
+                content:Faker::RickAndMorty.quote)
+end
 
 ```
 - Run ` $ rails db:setup`
