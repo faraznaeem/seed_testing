@@ -20,3 +20,4 @@ end
 
 You can change `Faker::RickAndMorty.character` and `Faker::RickAndMorty.quote`
 depending on what content you need to be displayed. You can find other examples in the [faker documentation](https://github.com/stympy/faker)
+
